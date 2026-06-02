@@ -24,8 +24,6 @@ public class ShoppingCart {
 
         Product product = new Product(name, price, quantity);
         products.add(product);
-
-        System.out.println(name + " added to cart.");
     }
 
     public void removeProduct(String name) {
