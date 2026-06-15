@@ -75,6 +75,32 @@ public class ShoppingCart {
         System.out.println("Cart Total: " + calculateTotalPrice());
     }
 
+    public void listProducts() {
+        if (products.isEmpty()) {
+            System.out.println("Cart is empty.");
+            return;
+        }
+
+        System.out.println("Shopping Cart Products:");
+
+        for (Product product : products) {
+            System.out.println(product.getName() + " | Price: " + product.getPrice() + " | Quantity: " + product.getQuantity() + " | Total: " + product.getTotalPrice());
+        }
+    }
+
+    public void listProductNames() {
+        if (products.isEmpty()) {
+            System.out.println("Cart is empty.");
+            return;
+        }
+
+        System.out.println("Product Names:");
+
+        for (Product product : products) {
+            System.out.println("- " + product.getName());
+        }
+    }
+
     public int getProductCount() {
         return products.size();
     }
@@ -82,6 +108,8 @@ public class ShoppingCart {
     public boolean isEmpty() {
         return products.isEmpty();
     }
+
+    public void helloWorld() { System.out.println("Hello World"); }
 
     public static void main(String[] args) {
         ShoppingCart cart = new ShoppingCart();
