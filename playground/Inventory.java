@@ -10,6 +10,14 @@ public class Inventory {
         items.add(item);
     }
 
+    public boolean remove(String item) {
+        return items.remove(item);
+    }
+
+    public boolean contains(String item) {
+        return items.contains(item);
+    }
+
     public int size() {
         return items.size();
     }
